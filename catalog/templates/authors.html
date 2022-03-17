@@ -1,0 +1,8 @@
+{% extends 'base/design.html' %}{% load static %} {% block content %} Authors
+<ol>
+    {% for author in all_author %}
+    <li>
+        <a href="{% url 'authorinfo' author.id %}">{{author.first_name}}</a> , {{author.last_name}} </li>
+    {% endfor %}
+</ol>
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends 'base/design.html' %} {% load static %} {% block content %}
+<h2>{{get_author.first_name}} {{get_author.last_name}}</h2> <br>
+<ul>
+    <li>Date of Birth: {{get_author.date_of_birth}}</li>
+    {% if get_author.date_of_death %}
+    <li>Died on: {{get_author.date_of_death}}</li>
+    {% else %}
+    <h4>Author is still alive </h4>{% endif %}
+    <!-- <li>Date of Death: </li> -->
+</ul>
+<h5>
+    Book authored
+</h5>
+{% if books %}
+<ol>
+    {% for book in books %}
+    <li>{{book.title}}</li>
+    {% endfor %}
+</ol>
+{% else %}
+<em>Author hasn't registered any book yet</em> {% endif %} {% endblock %}

@@ -1,0 +1,11 @@
+{% extends 'base/design.html' %} {% load static %} {% block content %}
+
+<h2>{{specific_book.title}} </h2>
+<ul>
+    <li>Author: <a href="{% url 'authorinfo' specific_book.author.id %}">{{specific_book.author}}</a> </li>
+    <li>Book Summary: {{specific_book.summary}}</li>
+    <li>isbn: {{specific_book.isbn}}</li>
+
+
+</ul>
+{% endblock %}

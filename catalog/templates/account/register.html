@@ -1,0 +1,10 @@
+{% extends 'base/design.html'%} {% block content %} <em>register-page</em>
+<br>
+<p>
+    <form action="" method="post">
+        {% csrf_token %} {{signform.as_p}}
+        <input type="submit" value="submit">
+    </form>
+</p>
+
+{% endblock %}

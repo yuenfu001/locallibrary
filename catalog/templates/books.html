@@ -1,0 +1,8 @@
+{% extends 'base/design.html' %}{% load static %} {% block content %} Books
+<ul>
+    {% for i in all_book %}
+    <li><a href="{% url 'bookinfo' i.id %}">{{i.title}}</a>: {{i.author}}</li>
+    {% endfor %}
+</ul>
+
+{% endblock %}
